@@ -12,6 +12,18 @@ int main() {
     if (GetUserNameA(username, &usernameSize)) {
         std::string path = "C:\\Users\\{user}\\AppData\\Local\\FortniteGame\\Saved\\Config\\WindowsClient";
 
+        std::cout << R"(
+            
+    _______  ______  ________________
+   / ____/ |/ / __ \/_  __/  _/ ____/
+  / __/  |   / / / / / /  / // /     
+ / /___ /   / /_/ / / / _/ // /___   
+/_____//_/|_\____/ /_/ /___/\____/   
+                                     
+        )" << std::endl;
+
+        std::cout << "Fortnite Resolution Changer" << std::endl;
+
         // Replace "{user}" with the system user's name
         size_t pos = path.find("{user}");
         if (pos != std::string::npos) {
